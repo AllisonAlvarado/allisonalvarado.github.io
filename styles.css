@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    overflow-x: hidden; /* Allow vertical scrolling */
+}
+
+#pdf-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.pdf-page {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+}
