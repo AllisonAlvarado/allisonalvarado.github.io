@@ -3,12 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allison Alvarado Portfolio</title>
+    <title>Allison Alvarado - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="pdf-container"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <nav class="navbar">
+        <button class="burger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="#about">About Me</a></li>
+            <li class="has-submenu">
+                <a href="#projects">Projects</a>
+                <ul class="submenu">
+                    <li class="submenu-title">Architecture</li>
+                    <li><a href="#arch1">Plaza Volcano</a></li>
+                    <li><a href="#arch2">Oximoron</a></li>
+                    <li><a href="#arch3">Cocina Moderna</a></li>
+                    <li class="submenu-title">Product Design</li>
+                    <li><a href="#prod1">Kurv</a></li>
+                    <li><a href="#prod2">Razer Flow Pro</a></li>
+                    <li><a href="#prod3">Interludio</a></li>
+                    <li><a href="#prod4">Versa</a></li>
+                </ul>
+            </li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-menu-overlay"></div>
+    <nav id="mobile-menu" class="mobile-menu" aria-hidden="true">
+        <ul class="mobile-nav-menu">
+            <li><a href="#about">About Me</a></li>
+            <li class="has-submenu">
+                <button class="submenu-toggle" aria-expanded="false">Projects</button>
+                <ul class="submenu">
+                    <li class="submenu-title">Architecture</li>
+                    <li><a href="#arch1">Plaza Volcano</a></li>
+                    <li><a href="#arch2">Oximoron</a></li>
+                    <li><a href="#arch3">Cocina Moderna</a></li>
+                    <li class="submenu-title">Product Design</li>
+                    <li><a href="#prod1">Kurv</a></li>
+                    <li><a href="#prod2">Razer Flow Pro</a></li>
+                    <li><a href="#prod3">Interludio</a></li>
+                    <li><a href="#prod4">Versa</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <button class="submenu-toggle" aria-expanded="false">Experience</button>
+                <ul class="submenu">
+                    <li><a href="#experience">Experience</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <button class="submenu-toggle" aria-expanded="false">Education</button>
+                <ul class="submenu">
+                    <li><a href="#education">Education</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h1 id="about_h1">Hi, I'm Allison Alvarado</h1>
+            <div id="about_content">
+                <img id="about_img" src="images/WhatsApp Image 2024-08-30 at 01.37.31_d0e39444.jpg" alt="Allison Alvarado">
+                <p id="about_p">Soy una arquitecta innovadora, creativa y proactiva con una sólida formación en el diseño.
+                    Las áreas que más disfruto en el proceso de
+                    los proyectos es el modelado 3D, renderizado
+                    y la postproducción. Estas etapas me permiten visualizar y refinar mis ideas con precisión,
+                    y explorar cómo los detalles y los acabados
+                    pueden mejorar la funcionalidad y la estética del diseño. Mi habilidad para atender a los
+                    detalles y mi constante búsqueda de nuevas
+                    experiencias profesionales me permiten redescubrirme continuamente como arquitecta. Estoy motivada por el deseo de contribuir
+                    al avance del diseño de producto, especialmente en contextos que requieren soluciones ingeniosas y adaptables.</p>
+            </div>
+        </section>
+        <section id="projects">
+            <h1>Projects</h1>
+            <section id="arch1">
+                <h2>Plaza Volcano</h2>
+                <div class="carousel" data-images='["images/arch1-1.jpg","images/arch1-2.jpg","images/arch1-3.jpg"]'></div>
+                <p>Proyecto residencial contemporáneo con enfoque en espacios abiertos y luz natural.</p>
+                <h3 class="tools-header">Tools</h3>
+                <div class="tools-logos" data-tools="lumion, sketchup, autocad"></div>
+            </section>
+            <section id="arch2">
+                <h2>Oximoron</h2>
+                <div class="carousel" data-images='["images/arch2-1.jpg","images/arch2-2.jpg","images/arch2-3.jpg"]'></div>
+                <p>Desarrollo multifamiliar en el centro de la ciudad, integrando sostenibilidad y diseño funcional.</p>
+                <h3 class="tools-header">Tools</h3>
+                <div class="tools-logos" data-tools="enscape, sketchup, autocad"></div>
+            </section>
+            <section id="arch3">
+                <h2>Cocina Moderna</h2>
+                <div class="carousel" data-images='["images/arch3-1.jpg","images/arch3-2.jpg","images/arch3-3.jpg"]'></div>
+                <p>Descripción: Diseño de cocina residencial en estilo industrial nórdico contemporáneo con conepto abierto.</p>
+                <p>Superficie: 10m2</p>
+                <p>Objetivo de Diseño: Optimizar una superficie limitada de 10 m2 mediante soluciones de distribución, iluminación y materiales que permitan una cocina altamente funcional, visualmente armónica y emocionalmente conectada con el usuario.</p>
+                <h3 class="tools-header">Tools</h3>
+                <div class="tools-logos" data-tools="enscape, sketchup, autocad"></div>
+            </section>
+            <section id="prod1">
+                <h2>Kurv</h2>
+                <div class="carousel" data-images='["images/prod1-1.jpg","images/prod1-2.jpg","images/prod1-3.jpg"]'></div>
+                <p>Curva + Kerfing: Combina un estilo moderno con la técnica del kerfing, que permite curvar la madera para lograr formas suaves y elegantes. El resultado es una pieza funcional y estética que aporta comodidad y carácter contemporáneo al espacio</p>
+                <h3 class="tools-header">Tools</h3>
+                <div class="tools-logos" data-tools="rhino"></div>
+            </section>
+            <section id="prod2">
+                <h2>Razer Flow Pro</h2>
+                <div class="carousel" data-images='["images/Renders/Razer Headset.1.jpg","images/Renders/Razer Headset.2.jpg","images/Renders/Razer Headset.3.jpg"]'></div>
+                <p>Flow (sustantivo): Estado mental en el que una persona se encuentra completamente inmersa en una actividad, con un alto grado de concentración, disfrute y enfoque, perdiendo la noción del tiempo y alcanzando un rendimiento óptimo de manera natural y sin esfuerzo. Concepto desarrollado por el psicólogo Mihály Csíkszentmihályi.</p>
+                <h3 class="tools-header">Tools</h3>
+                <div class="tools-logos" data-tools="rhino, keyshot"></div>
+            </section>
+            <section id="prod3">
+                <h2>Interludio</h2>
+                <div class="carousel" data-images='["images/prod3-1.jpg","images/prod3-2.jpg","images/prod3-3.jpg"]'></div>
+                <p>Interludio: proviene del latín interludium, que significa “entre juego” o “entre actuación”, refiriéndose originalmente a una pausa entre actos teatrales o musicales. Con el tiempo, el término pasó a designar cualquier intervalo breve en una actividad continua. Así, un interludio se asocia naturalmente con el descanso: un momento de respiro que permite recomponerse antes de continuar</p>
+                <h3 class="tools-header">Tools</h3>
+                <div class="tools-logos" data-tools="rhino, keyshot"></div>
+            </section>
+            <section id="prod4">
+                <h2>Versa</h2>
+                <div class="carousel" data-images='["images/prod4-1.jpg","images/prod4-2.jpg","images/prod4-3.jpg"]'></div>
+                <p>Versa: (de versátil) es un diseño de botella de vidrio que celebra la capacidad de adaptarse sin perder carácter. Su nombre refleja su esencia: una forma pensada para contener distintos tipos de alcohol, ya sean bebidas añejadas con historia o creaciones nuevas y experimentales. Versa se aleja de las convenciones de género y categoría, apostando por una estética limpia y atemporal que se adapta con elegancia a cualquier contexto. </p>
+                <h3 class="tools-header">Tools</h3>
+                <div class="tools-logos" data-tools="rhino, keyshot, solidworks"></div>
+            </section>
+        </section>
+        <section id="experience">
+            <h1>Experience</h1>
+            <div class="experience-categories">
+                <div class="experience-category">
+                    <h2>Soft Skills</h2>
+                    <ul>
+                        <li>Job 1</li>
+                        <li>Job 2</li>
+                        <li>Job 3</li>
+                    </ul>
+                </div>
+                <div class="experience-category">
+                    <h2>Softwares</h2>
+                    <ul>
+                        <li>AutoCAD</li>
+                        <li>SketchUp</li>
+                        <li>Revit</li>
+                        <li>Rhino</li>
+                        <li>Keyshot</li>
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                    </ul>
+                </div>
+                <div class="experience-category">
+                    <h2>Hard Skills</h2>
+                    <ul>
+                        <li>3D Modeling</li>
+                        <li>Rendering</li>
+                        <li>Technical Drawing</li>
+                        <li>Product Design</li>
+                        <li>Architectural Design</li>
+                    </ul>
+                </div>
+                <div class="experience-category">
+                    <h2>Past Jobs</h2>
+                    <ul>
+                        <li>Creativity</li>
+                        <li>Teamwork</li>
+                        <li>Problem Solving</li>
+                        <li>Adaptability</li>
+                        <li>Attention to Detail</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="education">
+            <h1>Education</h1>
+            <div class="experience-categories">
+                <div class="experience-category">
+                    <h2>Studies</h2>
+                    <ul>
+                        <li>Universidad Americana (UAM)</li>
+                        <p>
+                            Enero 2017 - Junio 2022</br>
+                            Grado en Arquitectura</br>
+                            Cum Laude
+                        </p>
+                        <li>Universidad de diseño e innovacion tecnologica (UDIT)</li>
+                        <p>
+                            Octubre 2024 - Julio 2025</br>
+                            Master en Diseño de Producto
+                        </p>
+                    </ul>
+                </div>
+                <div class="experience-category">
+                    <h2>Workshops</h2>
+                    <ul>
+                        <li> Taller de 3D en cerámica, bizcochado y esmaltado</li>
+                       <p>
+                           Abril 2025<br>
+                           UDIT Madrid
+                       </p>
+                       <li> Taller de Fabricación de Adobe Reforzado</li>
+                       <p>
+                           Marzo 2021<br>
+                           Red Iberoamericana - PROTERRA
+                       </p>
+                    </ul>
+                </div>
+                <div class="experience-category">
+                    <h2>Courses</h2>
+                    <ul>
+                         <li> Curso de Kerfing con Rhino + Grasshopper</li>
+                        <p>  
+                            Abril 2025<br>
+                            UDIT Madrid
+                        </p>
+                        <li>Curso de Introducción a Rhinoceros 3D y KeyShot</li>
+                        <p>  
+                            Agosto 2024 - Octubre 2024<br>
+                            Domestika
+                        </p>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>
