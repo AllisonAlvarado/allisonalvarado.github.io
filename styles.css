@@ -306,25 +306,26 @@ button[type="submit"]:hover {
 /* Burger menu styles */
 .burger {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 1.2rem;
-  left: 1.5rem;
+  right: 1.5rem;
+  left: auto;
   width: 2.5rem;
   height: 2.5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1201;
+  z-index: 1300;
   cursor: pointer;
   background: none;
   border: none;
 }
-.burger span {
+.burger span, .burger-bar {
   display: block;
-  width: 2rem;
-  height: 0.25rem;
-  margin: 0.3rem 0;
-  background: #222;
+  width: 1.5rem;
+  height: 0.15rem;
+  margin: 0.20rem 0;
+  background: #1a73e8;
   border-radius: 2px;
   transition: all 0.3s;
 }
@@ -347,28 +348,56 @@ button[type="submit"]:hover {
 .mobile-menu {
   position: fixed;
   top: 0;
-  left: -80vw;
+  right: -80vw;
+  left: auto;
   width: 80vw;
   max-width: 350px;
   height: 100vh;
-  background: #fff;
-  box-shadow: 2px 0 16px rgba(0,0,0,0.12);
+  background: #222; /* Match regular navbar background */
+  box-shadow: -2px 0 16px rgba(0,0,0,0.12);
   z-index: 1202;
   padding: 2.5rem 1.5rem 1.5rem 1.5rem;
-  transition: left 0.35s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: right 0.35s cubic-bezier(0.77,0.2,0.05,1.0);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
 .mobile-menu.active {
-  left: 0;
+  right: 0;
 }
-.mobile-menu .nav-menu {
+.mobile-menu .mobile-nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
-.mobile-menu .nav-menu > li {
+.mobile-menu .mobile-nav-menu > li {
   width: 100%;
+}
+.mobile-menu .mobile-nav-menu > li > a,
+.mobile-menu .submenu-toggle {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.mobile-menu .mobile-nav-menu > li > a:hover,
+.mobile-menu .mobile-nav-menu > li > a:focus,
+.mobile-menu .submenu-toggle:hover,
+.mobile-menu .submenu-toggle:focus {
+  background: #1a73e8;
+  color: #fff;
 }
 .mobile-menu .submenu {
   position: static;
@@ -384,11 +413,35 @@ button[type="submit"]:hover {
   font-weight: bold;
   margin-top: 0.7rem;
   margin-bottom: 0.2rem;
+  color: #bbb;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+.mobile-menu .submenu li a {
+  display: block;
+  padding: 0.7rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.mobile-menu .submenu li a:hover,
+.mobile-menu .submenu li a:focus {
+  background: #444;
+  color: #fff;
 }
 
 /* Hide desktop nav and show burger on mobile */
 @media (max-width: 900px) {
   .navbar {
+    display: block !important;
+    position: static;
+    width: 100%;
+    background: #222;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .nav-menu {
     display: none !important;
   }
   .burger {
