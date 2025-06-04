@@ -307,8 +307,8 @@ button[type="submit"]:hover {
 .burger {
   display: none;
   position: fixed;
-  top: 1.2rem;
-  right: 1.5rem;
+  top: 2rem;
+  right: .7rem;
   left: auto;
   width: 2.5rem;
   height: 2.5rem;
@@ -348,7 +348,7 @@ button[type="submit"]:hover {
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: -90vw;
+  right: -100vw;
   left: auto;
   width: 80vw;
   max-width: 350px;
@@ -511,7 +511,7 @@ button[type="submit"]:hover {
     }
     .experience-category {
         min-width: unset;
-        width: 100%;
+        width: 90%;
     }
 }
 
